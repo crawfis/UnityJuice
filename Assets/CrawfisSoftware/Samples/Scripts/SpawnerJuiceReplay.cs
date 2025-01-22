@@ -18,13 +18,13 @@ namespace CrawfisSoftware.Spawners
     }
     public class SpawnerJuiceReplay : InstanceTracker
     {
-        [SerializeField] private JuiceAbstract _juiceSettings;
+        [SerializeField] private JuiceScriptableAbstract _juiceSettings;
         [SerializeField] private float _spawnInterval = 0.3f;
         [SerializeField] private float _juiceTimeScale = 1f;
         [SerializeField] private WaitType _waitType = WaitType.NoWait;
         [SerializeField] private int _replayCountAtATime = 1;
 
-        private Dictionary<GameObject, (int, JuiceAbstract)> _juiceList = new Dictionary<GameObject, (int, JuiceAbstract)>();
+        private Dictionary<GameObject, (int, JuiceScriptableAbstract)> _juiceList = new Dictionary<GameObject, (int, JuiceScriptableAbstract)>();
         public IEnumerable TimingControlYield { get; set; }
 
         private void Awake()
@@ -37,7 +37,7 @@ namespace CrawfisSoftware.Spawners
             foreach (var (gameObject, sortOrder) in this.GetActiveInstances())
             {
                 //var juice = Instantiate<JuiceAbstract>(_juiceSettings);
-                JuiceAbstract juice = JuicePlayer.InstantiateJuice(gameObject, _juiceSettings, _juiceTimeScale);
+                JuiceScriptableAbstract juice = JuicePlayer.InstantiateJuice(gameObject, _juiceSettings, _juiceTimeScale);
                 if (!_juiceList.ContainsKey(gameObject)) _juiceList.Add(gameObject, (sortOrder, juice));
                 // Replace the Juice. Use a composite juice if you want multiple effects (or multiple JuiceSpawners).
                 _juiceList[gameObject] = (sortOrder, juice);
@@ -100,7 +100,7 @@ namespace CrawfisSoftware.Spawners
                 {
                     break;
                 }
-                target.SetActive(true);
+                //target.SetActive(true); // This is done in the JuiceScriptable now.
                 JuicePlayer.PlayJuice(juice, this);
                 count++;
                 if (count >= _replayCountAtATime)

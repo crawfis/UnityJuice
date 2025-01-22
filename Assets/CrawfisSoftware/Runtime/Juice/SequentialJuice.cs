@@ -6,9 +6,9 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "SequentialJuices", menuName = "CrawfisSoftware/Juice/Sequential Juices")]
-    internal class SequentialJuice : JuiceAbstract
+    internal class SequentialJuice : JuiceScriptableAbstract
     {
-        [SerializeField] private List<JuiceAbstract> _juices;
+        [SerializeField] private List<JuiceScriptableAbstract> _juices;
         public override IEnumerator Play(MonoBehaviour context)
         {
             foreach (var juiceTemplate in _juices)

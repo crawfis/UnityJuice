@@ -6,20 +6,15 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "TranslateJuice", menuName = "CrawfisSoftware/Juice/Translate Juice")]
-    public class TranslateJuice : JuiceAbstract
+    public class TranslateJuice : JuiceScriptableAbstract
     {
         [SerializeField] private AnimationCurve _offsetCurve;
         [SerializeField] private Vector3 _animationDirection = Vector3.up;
 
-        public override IEnumerator Play(MonoBehaviour _)
+        public override IEnumerator Play(MonoBehaviour context)
         {
             Vector3 startPosition = _target.transform.localPosition;
             float time = 0;
-            if (_target == null)
-            {
-                Debug.LogError("Target is null");
-                yield break;
-            }
             while (time < _offsetCurve.keys.Last().time)
             {
                 float offset = _offsetCurve.Evaluate(time);

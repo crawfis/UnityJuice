@@ -6,19 +6,13 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "RotationJuice", menuName = "CrawfisSoftware/Juice/Rotation Juice")]
-    public class RotateAboutJuice : JuiceAbstract
+    public class RotateAboutJuice : JuiceScriptableAbstract
     {
         [SerializeField] private AnimationCurve _rotationCurve;
         [SerializeField] private Vector3 _rotationAxis = Vector3.up;
 
-        public override IEnumerator Play(MonoBehaviour _)
+        public override IEnumerator Play(MonoBehaviour context)
         {
-            if (_target == null)
-            {
-                Debug.LogError("Target is null");
-                yield break;
-            }
-
             Quaternion startingRotation = _target.transform.localRotation;
             float time = 0;
             while (time < _rotationCurve.keys.Last().time)

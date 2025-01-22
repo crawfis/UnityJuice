@@ -14,8 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _juiceTimeScale: 1
+  _delay: 0
+  _startActive: 0
   _juices:
+  - {fileID: 11400000, guid: 63e792e170e4a4e4aab508572644f680, type: 2}
   - {fileID: 11400000, guid: eb0ccf5e43567d44cab7867308dccb83, type: 2}
   - {fileID: 11400000, guid: 57f4837b9c9c05e42861d1259ede367e, type: 2}
   - {fileID: 11400000, guid: 6c9f4178d107b684bab4e06d938ab826, type: 2}
   - {fileID: 11400000, guid: 306752223249f3a49a2fc3b40d91ef28, type: 2}
+  - {fileID: 11400000, guid: bf063401195f7a944948d07ee93daf8e, type: 2}

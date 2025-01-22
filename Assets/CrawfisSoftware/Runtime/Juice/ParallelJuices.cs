@@ -6,9 +6,9 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "ParallelJuices", menuName = "CrawfisSoftware/Juice/Parallel Juices")]
-    public class ParallelJuices : JuiceAbstract
+    public class ParallelJuices : JuiceScriptableAbstract
     {
-        [SerializeField] private List<JuiceAbstract> _juices;
+        [SerializeField] private List<JuiceScriptableAbstract> _juices;
 
         private MonoBehaviour _coRoutineHandler;
         private int _counter = 0;
@@ -37,7 +37,7 @@ namespace CrawfisSoftware.Juice
                 yield return null;
             }
         }
-        private IEnumerator IncrementCounterAndPlay(JuiceAbstract juice)
+        private IEnumerator IncrementCounterAndPlay(JuiceScriptableAbstract juice)
         {
             _counter++;
             yield return juice.Play(_coRoutineHandler);

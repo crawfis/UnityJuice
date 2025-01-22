@@ -6,19 +6,14 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "ScaleUpJuice", menuName = "CrawfisSoftware/Juice/Scale Juice")]
-    public class ScaleUpJuice : JuiceAbstract
+    public class ScaleUpJuice : JuiceScriptableAbstract
     {
         [SerializeField] private AnimationCurve _scaleCurve;
 
-        public override IEnumerator Play(MonoBehaviour _)
+        public override IEnumerator Play(MonoBehaviour context)
         {
             Vector3 startingScale = _target.transform.localScale;
             float time = 0;
-            if (_target == null)
-            {
-                Debug.LogError("Target is null");
-                yield break;
-            }
             while (time < _scaleCurve.keys.Last().time)
             {
                 Vector3 scale = startingScale * _scaleCurve.Evaluate(time);

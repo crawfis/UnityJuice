@@ -15,6 +15,7 @@ MonoBehaviour:
   _target: {fileID: 0}
   _juiceTimeScale: 1
   _juices:
+  - {fileID: 11400000, guid: 63e792e170e4a4e4aab508572644f680, type: 2}
   - {fileID: 11400000, guid: eb0ccf5e43567d44cab7867308dccb83, type: 2}
   - {fileID: 11400000, guid: 57f4837b9c9c05e42861d1259ede367e, type: 2}
-  - {fileID: 11400000, guid: 6c9f4178d107b684bab4e06d938ab826, type: 2}
+  - {fileID: 11400000, guid: 75e1506a1be71ea47899e69a22b2bb86, type: 2}

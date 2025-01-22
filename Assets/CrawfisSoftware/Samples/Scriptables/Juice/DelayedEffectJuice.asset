@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a32d8387d864af4f934989b4ade21e5, type: 3}
-  m_Name: EffectJuice
+  m_Script: {fileID: 11500000, guid: 5db5072c2aa750d4e88279b8f9398e29, type: 3}
+  m_Name: DelayedEffectJuice
   m_EditorClassIdentifier: 
   _target: {fileID: 0}
   _juiceTimeScale: 1
-  _prefab: {fileID: 3945913160115077693, guid: 957cee5ba67700943b5dc79b3a2b3e56, type: 3}
-  _duration: 1
-  _sizeScale: 0.4
-  _offset: {x: 0, y: 0, z: -0.5}
+  _juices:
+  - {fileID: 11400000, guid: b8221aca877c6844183b72f3ed224157, type: 2}
+  - {fileID: 11400000, guid: bf063401195f7a944948d07ee93daf8e, type: 2}

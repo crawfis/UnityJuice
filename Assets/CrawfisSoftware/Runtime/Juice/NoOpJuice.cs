@@ -5,7 +5,7 @@ using UnityEngine;
 namespace CrawfisSoftware.Juice
 {
     [CreateAssetMenu(fileName = "NoJuice", menuName = "CrawfisSoftware/Juice/No-op")]
-    public class NoOpJuice : JuiceAbstract
+    public class NoOpJuice : JuiceScriptableAbstract
     {
         public override IEnumerator Play(MonoBehaviour _)
         {
