@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5db5072c2aa750d4e88279b8f9398e29, type: 3}
+  m_Name: _Juices-Sequential
+  m_EditorClassIdentifier: 
+  _target: {fileID: 0}
+  _juiceTimeScale: 1
+  _juices:
+  - {fileID: 11400000, guid: eb0ccf5e43567d44cab7867308dccb83, type: 2}
+  - {fileID: 11400000, guid: bf063401195f7a944948d07ee93daf8e, type: 2}
