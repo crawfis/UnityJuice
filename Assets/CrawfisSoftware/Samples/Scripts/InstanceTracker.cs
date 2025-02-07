@@ -30,6 +30,16 @@ namespace CrawfisSoftware.AssetManagement
             InstantiationSingleton.OnInstanceCreated -= OnInstanceCreated;
         }
 
+        public void Clear()
+        {
+            instances.Clear();
+        }
+
+        public void AddInstance(GameObject instance)
+        {
+            instances.Add((instance, instances.Count));
+        }
+
         protected virtual void OnInstanceCreated(GameObject instance, int count)
         {
             instances.Add((instance, count));
